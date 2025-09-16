@@ -24,6 +24,21 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>GIDClientID</key>
+	<string>571203712408-8hef5assjh3mrobom0b897d0a47b12qp.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>571203712408-dklmf8kb0nvnngth3n8nfj2u3s4qujvn.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.571203712408-8hef5assjh3mrobom0b897d0a47b12qp</string>
+			</array>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

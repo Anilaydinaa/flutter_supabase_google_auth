@@ -1,4 +1,6 @@
 import 'dart:developer';
+import 'dart:io';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -9,10 +11,14 @@ class GoogleSignInService {
 
   static Future<AuthResponse?> signInWithGoogle() async {
     try {
+      
       log('Initializing GoogleSignIn...');
       await _googleSignIn.initialize(
-        serverClientId:
-            "571203712408-dklmf8kb0nvnngth3n8nfj2u3s4qujvn.apps.googleusercontent.com",
+        clientId: Platform.isIOS
+            ? dotenv.get('IOS_CLIENT_ID')
+            : null,
+        serverClientId: 
+            dotenv.get('GOOGLE_CLIENT_ID'),
       );
 
       log('Calling authenticate()...');
